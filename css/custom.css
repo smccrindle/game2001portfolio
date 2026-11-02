@@ -1,4 +1,19 @@
+/* Fine-tuning hero images */
 .hero-carousel-img {
 	height: 450px;
+	object-fit: cover;
+}
+
+/* Back to top button */
+#backToTop {
+	display: inline-block;
+	width: 50px; 
+	height: 50px;
+	transform: rotate(-90deg);
+}
+
+/* Profile pic */
+#profilePic {
+	aspect-ratio: 1 / 1;
 	object-fit: cover;
 }

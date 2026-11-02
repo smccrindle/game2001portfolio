@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<!-- STEP 1: Basic HTML page structure -->
+<!-- STEP 1: Basic HTML page structure (head, body, header, main, footer) -->
 <html lang="en">
 
 <head>
+	<!-- Meta tag to set character encoding for proper rendering of text -->
 	<meta charset="UTF-8">
 	<!-- Meta tag which helps ensure page adapts to various screen sizes (responsive) -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,9 +11,9 @@
 	<title>Your Name | Portfolio</title>
 	<!-- Icon for browser tab and favourites -->
 	<link rel="icon" href="img/Game_controller_with_wire_Pinhead_icon.svg">
-
 	<!-- STEP 3a: Link the CSS framework, Bootstrap 5.3.8 CSS CDN -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+	<!-- STEP 4a: Link a custom CSS for fine-tuning visual styles or other purposes -->
 	<link href="css/custom.css" rel="stylesheet">
 </head>
 
@@ -22,14 +23,29 @@
 	<header>
 		<nav class="navbar navbar-expand-lg navbar-dark bg-black border-bottom border-secondary fixed-top">
 			<div class="container">
-				<h1><a class="navbar-brand fw-bold text-primary" href="#hero">Your Name | Portfolio</a></h1>
+				<h1>
+					<a class="navbar-brand fw-bold text-primary" href="#">
+						<svg xmlns="http://www.w3.org/2000/svg" width="40" viewBox="0 0 15 15" fill="currentColor">
+							<path d="M13.1 11.5c-0.6 0.3 -1.4 0.1 -1.8 -0.5l-1.1 -1.4h-5.4l-1.1 1.4c-0.5 0.7 -1.4 0.8 -2.1 0.3c-0.5 -0.4 -0.7 -1 -0.6 -1.5l0.7 -3.7c0.2 -1.2 1.3 -2.1 2.5 -2.1h2.8v-1.5c0 -0.8 0.6 -1.5 1.4 -1.5h3.1c0.3 0 0.5 0.2 0.5 0.5s-0.2 0.5 -0.5 0.5h-3c-0.3 0 -0.5 0.2 -0.5 0.4v0.1v1.5h2.8c1.2 0 2.3 0.9 2.5 2.1l0.7 3.7c0.1 0.7 -0.2 1.4 -0.9 1.7zm-7.1 -5c0 -0.8 -0.7 -1.5 -1.5 -1.5s-1.5 0.7 -1.5 1.5s0.7 1.5 1.5 1.5s1.5 -0.7 1.5 -1.5zm6 0c0 -0.3 -0.2 -0.5 -0.5 -0.5h-0.5v-0.5c0 -0.3 -0.2 -0.5 -0.5 -0.5s-0.5 0.2 -0.5 0.5v0.5h-0.5c-0.3 0 -0.5 0.2 -0.5 0.5s0.2 0.5 0.5 0.5h0.5v0.5c0 0.3 0.2 0.5 0.5 0.5s0.5 -0.2 0.5 -0.5v-0.5h0.5c0.3 0 0.5 -0.2 0.5 -0.5z"/>
+						</svg> 
+						Your Name | Portfolio
+					</a>
+				</h1>
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
 					aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
 				<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
 					<ul class="navbar-nav">
-						<li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+						<!-- STEP 6: Add a series of list items, each with a local link to the appropriate section below (using the id) -->
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#projects" role="button" aria-expanded="false">Projects</a>
+							<ul class="dropdown-menu">
+								<li><a class="dropdown-item" href="#project-1">Project Neon: Eclipse</a></li>
+								<li><a class="dropdown-item" href="#project-2">Aetheria: Fragmented</a></li>
+							</ul>
+						</li>
+						<!-- STEP 17: Build a navigation dropdown so you can see how your page can be expanded as your body of work grows -->
 						<li class="nav-item"><a class="nav-link" href="#playable">Playable</a></li>
 						<li class="nav-item"><a class="nav-link" href="#trailer">Trailer</a></li>
 						<li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
@@ -44,8 +60,11 @@
 	<!-- MAIN CONTENT CONTAINER -->
 	<main class="container py-5 mt-5">
 
-		<!-- 1. HERO SECTION (CAROUSEL) -->
+		<!-- STEP 5: Build out primary content sections, which will map to navigation (Hero, Projects, Playable Demo, Trailer, Skills, About Me, Contact)-->
+		<!-- HERO SECTION (CAROUSEL) -->
 		<section id="hero" class="my-4">
+			<!-- STEP 7: Build the Bootstrap Carousel component to draw the visitor in to your content -->
+			<!-- Learn more about the Carousel component at https://getbootstrap.com/docs/5.3/components/carousel/ -->
 			<div id="heroCarousel" class="carousel slide shadow-lg rounded overflow-hidden border border-secondary"
 				data-bs-ride="carousel">
 				<div class="carousel-inner">
@@ -53,10 +72,8 @@
 					<!-- Slide 1 -->
 					<div class="carousel-item active">
 						<figure class="m-0 position-relative">
-							<!-- <img src="https://picsum.photos/id/1073/1200/450" class="d-block w-100 hero-carousel-img"
-								alt="Level Design Showcase"> -->
 							<img src="https://picsum.photos/id/1067/1920/1080" class="d-block w-100 hero-carousel-img"
-								alt="Project Cyberpunk Screenshot">
+								alt="Project Neon: Eclipse - Screenshot">
 							<figcaption
 								class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 p-4 rounded-3 text-start mb-4 m-0">
 								<h2 class="fw-bold text-info">Project Neon: Eclipse</h2>
@@ -70,10 +87,8 @@
 					<!-- Slide 2 -->
 					<div class="carousel-item">
 						<figure class="m-0 position-relative">
-							<!-- <img src="https://picsum.photos/id/1069/1200/450" class="d-block w-100 hero-carousel-img"
-								alt="Gameplay Systems Prototype"> -->
 							<img src="https://picsum.photos/id/1015/1920/1080" class="d-block w-100 hero-carousel-img"
-								alt="Aetheria Fragmented Screenshot">
+								alt="Aetheria: Fragmented - Screenshot">
 							<figcaption
 								class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 p-4 rounded-3 text-start mb-4 m-0">
 								<h2 class="fw-bold text-warning">Aetheria: Fragmented</h2>
@@ -84,13 +99,12 @@
 						</figure>
 					</div>
 
+					<!-- STEP 6: Build out another slide for the carousel -->
 					<!-- Slide 3 -->
 					<div class="carousel-item">
 						<figure class="m-0 position-relative">
-							<!-- <img src="https://picsum.photos/id/0/1200/450" class="d-block w-100 hero-carousel-img"
-								alt="UI/UX Architecture"> -->
 							<img src="https://picsum.photos/id/6/5000/3333" class="d-block w-100 hero-carousel-img"
-								alt="Playable Game Prototype Screenshot">
+								alt="Developer's desktop photo">
 							<figcaption
 								class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 p-4 rounded-3 text-start mb-4 m-0">
 								<h2 class="fw-bold text-danger">Phaser 3 Arcade Build</h2>
@@ -115,10 +129,11 @@
 			</div>
 		</section>
 
-		<!-- 2. PROJECTS SECTION -->
-
+		<!-- PROJECTS SECTION (CARDS) -->
 
 		<section id="projects" class="my-5">
+			<!-- STEP 8: Construct Bootstrap Cards for featured projects -->
+			<!-- Learn more about the Card Component at https://getbootstrap.com/docs/5.3/components/card/ -->
 			<h2 class="border-bottom border-secondary pb-2 mb-4">Featured Projects</h2>
 
 			<div class="row g-4">
@@ -143,6 +158,7 @@
 					</div>
 				</div>
 
+				<!-- STEP 9: Add another Card Component for Project 2 -->
 				<!-- Project 2 -->
 				<div class="col-md-6" id="project-2">
 					<div class="card bg-dark text-white h-100 shadow-sm">
@@ -167,8 +183,9 @@
 			</div>
 		</section>
 
-		<!-- 3. PLAYABLE DEMO SECTION (BREAKOUT GAME) -->
+		<!-- PLAYABLE DEMO SECTION (EMBEDDED WEBGL GAME USING IFRAME) -->
 		<section id="playable" class="my-5">
+			<!-- STEP 10: Embed a fully playable game using an iframe element inside a Bootstrap Card -->
 			<h2 class="border-bottom border-secondary pb-2 mb-4">Playable Build</h2>
 			<div class="card bg-dark text-white shadow-lg p-3 border border-secondary">
 				<div class="card-body">
@@ -188,8 +205,9 @@
 			</div>
 		</section>
 
-		<!-- 4. TRAILER SECTION (YOUTUBE EMBED) -->
+		<!-- TRAILER SECTION (YOUTUBE EMBED) -->
 		<section id="trailer" class="my-5">
+			<!-- STEP 11: Embed a YouTube video featuring a gameplay demo using an iframe element inside a Bootstrap Card -->
 			<h2 class="border-bottom border-secondary pb-2 mb-4">Gameplay Showcase</h2>
 			<div class="card bg-dark text-white shadow-lg p-3 border border-secondary">
 				<div class="card-body">
@@ -205,95 +223,79 @@
 			</div>
 		</section>
 
-		<!-- 5. SKILLS & TOOLCHAIN -->
+		<!-- SKILLS -->
 		<section id="skills" class="my-5">
-			<h2 class="border-bottom border-secondary pb-2 mb-4">Skills & Technical Toolchain</h2>
+			<!-- STEP 12: Let's build a responsive grid layout for our skills -->
+			<h2 class="border-bottom border-secondary pb-2 mb-4">Technical & Design Skills</h2>
 			<div class="row g-3">
 				<div class="col-md-4">
 					<div class="p-3 bg-dark rounded border border-secondary h-100">
-						<h4 class="text-primary">Engines & Tools</h4>
+						<h3 class="text-primary fs-5">Engines & Tools</h3>
 						<p class="mb-0">Unreal Engine 5, Unity 3D, Godot, Blender (Blockout), FMOD</p>
 					</div>
 				</div>
 				<div class="col-md-4">
 					<div class="p-3 bg-dark rounded border border-secondary h-100">
-						<h4 class="text-primary">Languages</h4>
+						<h3 class="text-primary fs-5">Languages</h3>
 						<p class="mb-0">C++, C#, Blueprints, Python, HTML5/CSS3</p>
 					</div>
 				</div>
+				<!-- STEP 13: Now we will add another skill -->
 				<div class="col-md-4">
 					<div class="p-3 bg-dark rounded border border-secondary h-100">
-						<h4 class="text-primary">Design & Workflow</h4>
+						<h3 class="text-primary fs-5">Design & Workflow</h3>
 						<p class="mb-0">Git/GitHub, System Balance, Level Design Grayboxing, Rapid Prototyping</p>
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<!-- 6. ABOUT ME SECTION -->
+		<!-- ABOUT ME SECTION -->
 		<section id="about" class="my-5">
+			<!-- STEP 14: Add a card with a photo and a short bio -->
 			<h2 class="border-bottom border-secondary pb-2 mb-4">About Me</h2>
 			<div class="card bg-dark text-white shadow-lg border border-secondary p-4">
 				<div class="row g-4 align-items-center">
 					<div class="col-md-3 text-center">
-						<img src="https://picsum.photos/id/64/400/400" alt="Developer Profile Photo"
-							class="img-fluid rounded border border-secondary shadow-sm"
-							style="aspect-ratio: 1 / 1; object-fit: cover;">
+						<img src="https://picsum.photos/id/64/400/400" alt="Developer Profile Photo" class="img-fluid rounded border border-secondary shadow-sm" id="profilePic">
 					</div>
 					<div class="col-md-9">
-						<h3 class="card-title text-info mb-2">Alex Mercer</h3>
+						<h3 class="card-title text-info mb-2">Your Name</h3>
 						<p class="text-secondary fw-semibold mb-3">Game Designer & Systems Developer</p>
-						<p class="card-text">
-							I specialize in crafting engaging gameplay mechanics, rapid prototyping, and balanced game
-							systems. With a background in modular level design and software architecture, I focus on
-							building responsive player experiences across both 2D and 3D pipelines.
+						<p class="card-text">I specialize in crafting engaging gameplay mechanics, rapid prototyping, and balanced game systems. With a background in modular level design and software architecture, I focus on building responsive player experiences across both 2D and 3D pipelines.
 						</p>
 					</div>
 				</div>
 			</div>
 		</section>
+		<!-- STEP 16: Add a back-to-top button to enhance page usability (have a look at the JavaScript, too) -->
 		<!-- BACK TO TOP BUTTON -->
 		<a href="#" id="backToTop"
-			class="btn btn-primary position-fixed bottom-0 end-0 m-4 rounded-circle shadow-lg z-3 d-none align-items-center justify-content-center"
-			style="width: 50px; height: 50px;" aria-label="Back to Top">
-			<span class="fs-4 lh-1" style="transform: rotate(-90deg); display: inline-block;">&#10140;</span>
+			class="btn btn-primary position-fixed bottom-0 end-0 m-4 rounded-circle shadow-lg z-3 d-none align-items-center justify-content-center" aria-label="Back to Top">
+			<span class="fs-4 lh-1">&#10140;</span>
 		</a>
 	</main>
 
 	<!-- FOOTER & CONTACT SECTION -->
 	<footer id="contact" class="bg-dark text-white border-top border-secondary py-4 mt-5">
+		<!-- STEP 15: Build out the page footer with links where you can be reached -->
 		<div class="container text-center">
 			<p class="mb-2">Get in touch for game jams, collaborations, or internships!</p>
 			<div class="mb-3">
-				<a href="mailto:alex@example.com" class="btn btn-primary btn-sm me-2">Email Me</a>
+				<a href="mailto:me@mydomain.com" class="btn btn-primary btn-sm me-2">Email Me</a>
 				<a href="#" class="btn btn-outline-light btn-sm me-2">GitHub</a>
 				<a href="#" class="btn btn-outline-light btn-sm me-2">itch.io</a>
 				<a href="#" class="btn btn-outline-light btn-sm">LinkedIn</a>
 			</div>
-			<small class="text-secondary">&copy; 2026 Alex Mercer. Built with Bootstrap 5 & Hosted on GitHub
+			<small class="text-secondary">&copy; 2026 Your Name. Built with Bootstrap 5 & Hosted on GitHub
 				Pages.</small>
 		</div>
 	</footer>
 
 	<!-- STEP 3b: Link the JavaScript framework, Bootstrap 5.3.8 JS Bundle CDN -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-	<script>
-		// Grab the HTML element that will be used for the button
-		const backToTopBtn = document.getElementById('backToTop');
-		// Tell the browser that when the screen is scrolled, do something
-		window.addEventListener('scroll', () => {
-			// If the user has scrolled down at least 600px, show the button
-			if (window.scrollY > 600) {
-				// Show button by swapping d-none for d-flex
-				backToTopBtn.classList.remove('d-none');
-				backToTopBtn.classList.add('d-flex');
-			} else {
-				// Hide button when near the top
-				backToTopBtn.classList.remove('d-flex');
-				backToTopBtn.classList.add('d-none');
-			}
-		});
-	</script>
+	<!-- STEP 4b: Link a custom JavaScript for special interactive features or other purposes -->
+	<script src="js/custom.js"></script>
 
 </body>
 <!--
@@ -307,10 +309,16 @@ Lipsum.com. (n.d.). Lorem ipsum: All the facts [Placeholder text generator]. htt
 
 Picsum Photos. (n.d.). Lorem Picsum [Placeholder image service]. https://picsum.photos/
 
+Pinhead. (2012, June 9). File:Game controller with wire Pinhead icon.svg [Vector graphic]. Wikimedia Commons. https://commons.wikimedia.org/wiki/File:Game_controller_with_wire_Pinhead_icon.svg
+
 The Bootstrap Authors. (2024). Bootstrap (Version 5.3) [Computer software]. https://getbootstrap.com/
 
 The Gamedev Phaser Content Kit. (n.d.). Breakout: Phase 1 [Web-based game demo]. Itch.io. https://html-classic.itch.zone/html/236087/index.html
 
 YouTube. (n.d.). Minecraft parkour showcase [Video file]. https://www.youtube.com/watch?v=ZCPt78a1eLc
 -->
+
+<!-- STEP 18: Create a remote repository for this site on GitHub, and push this code -->
+<!-- STEP 19: Enable GitHub Pages on the remote repository -->
+<!-- STEP 20: View your new portfolio Web site! :) -->
 </html>
