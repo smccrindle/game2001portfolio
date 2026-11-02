@@ -4,6 +4,11 @@
 	object-fit: cover;
 }
 
+/* Embedded playable game background */
+.arcade-bg {
+	background-color: #eeeeee;
+}
+
 /* Back to top button */
 #backToTop {
 	display: inline-block;
