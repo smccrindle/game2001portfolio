@@ -1,5 +1,4 @@
-// Custom page interactive features
-
+// CUSTOM INTERACTIVE FEATURES
 
 // Back to top button
 
