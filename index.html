@@ -59,7 +59,7 @@
 	<!-- 1. STICKY GLOBAL NAVIGATION -->
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top border-bottom border-secondary">
 		<div class="container">
-			<a class="navbar-brand fw-bold text-primary" href="#">Alex Mercer | Game Designer</a>
+			<h1><a class="navbar-brand fw-bold text-primary" href="#">Alex Mercer | Game Designer</a></h1>
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
 				<span class="navbar-toggler-icon"></span>
 			</button>
@@ -68,6 +68,7 @@
 					<li class="nav-item"><a class="nav-link" href="#hero">Featured</a></li>
 					<li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
 					<li class="nav-item"><a class="nav-link" href="#playable">Playable Demo</a></li>
+					<li class="nav-item"><a class="nav-link" href="#trailer">Gameplay Trailer</a></li>
 					<li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
 					<li class="nav-item"><a class="nav-link" href="#about">About</a></li>
 					<li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
@@ -89,40 +90,40 @@
 				<button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
 			</div>
 
-			<!-- Slides (Exactly 3 Slides) -->
+			<!-- Slides -->
 			<div class="carousel-inner">
 				<!-- Slide 1 -->
-				<div class="carousel-item active">
+				<figure class="carousel-item m-0 p-0 active">
 					<img src="https://picsum.photos/id/1067/1920/1080" class="d-block w-100 hero-carousel-img"
 						alt="Project Cyberpunk Screenshot">
-					<div class="carousel-caption bg-dark bg-opacity-75 p-4 rounded-3 text-start mb-4">
+					<figcaption class="carousel-caption bg-dark bg-opacity-75 p-4 rounded-3 text-start m-0 mb-4">
 						<h2 class="fw-bold text-info">Project Neon: Eclipse</h2>
 						<p class="lead d-none d-md-block">Lead Systems & Combat Designer — Built in Unreal Engine 5.</p>
 						<a href="#project-1" class="btn btn-info fw-bold me-2">Jump to Details</a>
-					</div>
-				</div>
+					</figcaption>
+				</figure>
 
-				<!-- Slide 2: Aetheria: Fragmented -->
-				<div class="carousel-item">
+				<!-- Slide 2 -->
+				<figure class="carousel-item m-0 p-0">
 					<img src="https://picsum.photos/id/1015/1920/1080" class="d-block w-100 hero-carousel-img"
 						alt="Aetheria Fragmented Screenshot">
-					<div class="carousel-caption bg-dark bg-opacity-75 p-4 rounded-3 text-start mb-4">
+					<figcaption class="carousel-caption bg-dark bg-opacity-75 p-4 rounded-3 text-start m-0 mb-4">
 						<h2 class="fw-bold text-warning">Aetheria: Fragmented</h2>
 						<p class="lead d-none d-md-block">Environmental Level Designer — Built in Unity 3D.</p>
 						<a href="#project-2" class="btn btn-warning fw-bold me-2">Jump to Details</a>
-					</div>
-				</div>
+					</figcaption>
+				</figure>
 
 				<!-- Slide 3 -->
-				<div class="carousel-item">
+				<figure class="carousel-item m-0 p-0">
 					<img src="https://picsum.photos/id/6/5000/3333" class="d-block w-100 hero-carousel-img"
 						alt="Playable Game Prototype Screenshot">
-					<div class="carousel-caption bg-dark bg-opacity-75 p-4 rounded-3 text-start mb-4">
+					<figcaption class="carousel-caption bg-dark bg-opacity-75 p-4 rounded-3 text-start m-0 mb-4">
 						<h2 class="fw-bold text-danger">Phaser 3 Arcade Build</h2>
 						<p class="lead d-none d-md-block">Playable 2D Breakout-type Arcade Game — Built with Phaser.</p>
 						<a href="#playable" class="btn btn-danger fw-bold me-2">Play in Browser</a>
-					</div>
-				</div>
+					</figcaption>
+				</figure>
 			</div>
 
 			<!-- Controls (Explicitly targets #heroCarousel) -->
@@ -209,29 +210,9 @@
 			</div>
 		</section>
 
-		<!-- 4. PLAYABLE EMBEDDED GAME SECTION (CHROME DINO RUN) -->
-		<section id="playable" class="my-5 pt-3">
-			<h2 class="border-bottom border-secondary pb-2 mb-4">The No-Internet Hero</h2>
-			<div class="card bg-dark text-white shadow-lg p-3">
-				<div class="card-body p-1">
-					<h3 class="card-title mb-2 text-warning px-3 pt-2">Offline T-Rex Runner</h3>
-					<p class="card-text text-secondary mb-3 px-3">An open-source clone of the iconic Chrome game. Simple
-						controls, massive replayability. Play right here!</p>
-
-					<!-- Responsive Bootstrap Iframe Wrapper (Adjusting ratio for the shorter game height) -->
-					<div class="ratio ratio-21x9 rounded overflow-hidden border border-secondary bg-light">
-						<!-- T-Rex Runner Clone hosted on GitHub Pages -->
-						<iframe src="https://wayou.github.io/t-rex-runner/" title="Chrome Dino Run Game Clone"
-							allowfullscreen loading="lazy" class="p-2"></iframe>
-					</div>
-					<small class="text-muted d-block mt-1 px-3">Press [Space] or [Tap] inside the game window to
-						start.</small>
-				</div>
-			</div>
-		</section>
 
 		<!-- 4.1 ITCH.IO EMBED SECTION -->
-		<section id="youtube-demo" class="my-5">
+		<section id="trailer" class="my-5">
 			<h2 class="border-bottom border-secondary pb-2 mb-4">YouTube Gameplay Video Embed</h2>
 			<div class="card bg-dark text-white shadow-lg p-3">
 				<div class="card-body">
@@ -247,7 +228,7 @@
 							allowfullscreen></iframe>
 					</div>
 					<small class="text-muted d-block mt-2">
-						Tip for students: Copy the iframe link directly from your video's page</strong>.
+						Tip for students: Copy the iframe link directly from your video's page.
 					</small>
 				</div>
 			</div>
@@ -259,19 +240,19 @@
 			<div class="row g-3">
 				<div class="col-md-4">
 					<div class="p-3 bg-dark rounded border border-secondary h-100">
-						<h4 class="text-primary">Engines & Tools</h4>
+						<h3 class="text-primary">Engines & Tools</h3>
 						<p class="mb-0">Unreal Engine 5, Unity 3D, Godot, Blender (Blockout), FMOD</p>
 					</div>
 				</div>
 				<div class="col-md-4">
 					<div class="p-3 bg-dark rounded border border-secondary h-100">
-						<h4 class="text-primary">Languages</h4>
+						<h3 class="text-primary">Languages</h3>
 						<p class="mb-0">C++, C#, Blueprints, Python, HTML5/CSS3</p>
 					</div>
 				</div>
 				<div class="col-md-4">
 					<div class="p-3 bg-dark rounded border border-secondary h-100">
-						<h4 class="text-primary">Design & Workflow</h4>
+						<h3 class="text-primary">Design & Workflow</h3>
 						<p class="mb-0">Git/GitHub, System Balance, Level Design Grayboxing, Rapid Prototyping</p>
 					</div>
 				</div>
